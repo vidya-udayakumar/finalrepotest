@@ -20,7 +20,7 @@ resource "aws_eks_cluster" "eks_cluster_Dev" {
 }
 
 resource "aws_iam_role" "iam_role_eks" {
-  name = "eks-cluster-dev-role"
+  name = "eks-cluster-dev-role-${var.name}"
 
   assume_role_policy = <<POLICY
 {
