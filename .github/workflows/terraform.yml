@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./vpc
+        working-directory: ./ecr
 
     steps:
     - name: Checkout code
