@@ -23,7 +23,7 @@ jobs:
         aws-region: ap-south-1
 
     - name: Terraform Init
-      run: terraform init -input=false -backend-config=backend.tf
+      run: terraform init -input=false
 
     - name: Terraform Plan
       run: terraform plan -input=false -out=plan.tfplan
