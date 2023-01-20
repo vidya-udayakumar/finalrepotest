@@ -1,5 +1,5 @@
 variable "repository_name" {
-  default = "ts-dap-dev-ecr-repo"
+  default = "vidhuprivate repo"
 }
 
 variable "region" {
