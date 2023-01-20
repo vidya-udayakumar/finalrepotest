@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "bucket-forterraform"
-    key    = "bucket-forterraform/resources/vpc/terraform.tfstate"
-    region = "ap-south-1"
+    bucket               = "bucket-forterraform"
+    region               = "ap-southeast-1"
+    key                  = "bucket-forterraform/resources/vpc/terraform.tfstate"
   }
 }
