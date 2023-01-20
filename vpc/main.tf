@@ -136,12 +136,8 @@ resource "aws_subnet" "ts-16300419-ESG-cp-dev-private-sub-2" {
   
 
   tags = {
-<<<<<<< HEAD
     Name = "ts-16300419-ESG-cp-dev-private-sub-2"
     env = "cp-dev"
-=======
-    Name = var.private_subnet_2_tag
->>>>>>> b053a14c5f44a7aa9f6ea20c59616050be1058d7
   }
 }
 
