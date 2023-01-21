@@ -22,8 +22,8 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-south-1
 
-    - name: Print kubectl version
-      run: kubectl version --short
+    - name: Print eksctl version
+      run: eksctl --version
 
     - name: Terraform Init
       run: terraform init -input=false
