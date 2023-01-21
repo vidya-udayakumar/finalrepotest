@@ -23,7 +23,7 @@ jobs:
         aws-region: ap-south-1
 
     - name: Print kubectl version
-      run: kubectl version
+      run: kubectl version --short
 
     - name: Terraform Init
       run: terraform init -input=false
