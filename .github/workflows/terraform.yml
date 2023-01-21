@@ -23,7 +23,7 @@ jobs:
         aws-region: ap-south-1
 
     - name: Print eksctl version
-      run: eksctl --version
+      run: eksctl version
 
     - name: Terraform Init
       run: terraform init -input=false
