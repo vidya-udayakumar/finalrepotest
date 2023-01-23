@@ -45,3 +45,4 @@ variable "fargate_profiles" {
 variable "fargate_profile_subnet_ids" {
   type = list(string)
 }
+
