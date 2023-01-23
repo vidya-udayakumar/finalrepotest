@@ -2,12 +2,12 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: fp-dev
+  name: vidya
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: fp-dev
+  namespace: vidya
   name: deployment1
 spec:
   selector:
@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: app1
     spec:
       containers:
-      - image: 955519338954.dkr.ecr.ap-southeast-1.amazonaws.com/ts-cp-dev-ecr-repo:latest
+      - image: 497961877860.dkr.ecr.ap-southeast-1.amazonaws.com/yellow:latest
         imagePullPolicy: Always
         name: app1
         ports:
@@ -29,7 +29,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: fp-dev
+  namespace: vidya
   name: service1
 spec:
   ports:
@@ -43,7 +43,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: fp-dev
+  namespace: vidya
   name: ingress1
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
