@@ -1,9 +1,9 @@
     module "eks" {
   source = "../modules/eks"
 
-  cluster_name       = "ts-cp-dev-eks-1"
-  vpc_id             = "vpc-0e3953cb26597b2f0"
-  cluster_subnet_ids = ["subnet-02cd374dcc97ccbaf","subnet-0a5377b67f1a03afb"]
+  cluster_name       = "onecloud"
+  vpc_id             = "vpc-00fdaccd57773927f"
+  cluster_subnet_ids = ["subnet-0123bfbc9ca78c440","subnet-0c900679692c0a018"]
 
   fargate_profiles = {
     fp-default = {
@@ -15,7 +15,7 @@
       selectors = [{ namespace = "fp-dev" }]
     }
   }
-  fargate_profile_subnet_ids = ["subnet-02cd374dcc97ccbaf","subnet-0a5377b67f1a03afb"]
+  fargate_profile_subnet_ids = ["subnet-0123bfbc9ca78c440","subnet-0c900679692c0a018"]
   
   common_tags = {
     env     = "dev"
