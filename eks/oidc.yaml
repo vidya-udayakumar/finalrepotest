@@ -1,0 +1,18 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: new
+  region: ap-southeast-1
+
+iam:
+  withOIDC: true
+  serviceAccounts:
+  - metadata:
+      name: aws-load-balancer-controller
+      # if no namespace is set, "default" will be used;
+      # the namespace will be created if it doesn't exist already
+      namespace: kube-system
+      labels: {aws-usage: "loadblancing"}
+    attachPolicyARNs:
+    - "arn:aws:iam::955519338954:policy/AWSLoadBalancerControllerIAMPolicy"
