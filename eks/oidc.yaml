@@ -15,4 +15,4 @@ iam:
       namespace: kube-system
       labels: {aws-usage: "loadblancing"}
     attachPolicyARNs:
-    - "arn:aws:iam::955519338954:policy/AWSLoadBalancerControllerIAMPolicy"
+    - "arn:aws:iam::497961877860:policy/AWSLoadBalancerControllerIAMPolicy"
