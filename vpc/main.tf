@@ -25,6 +25,7 @@ resource "aws_subnet" "ts-16300419-ESG-cp-dev-pubic-sub-1" {
   tags = {
     Name = "ts-16300419-ESG-cp-dev-pubic-sub-1"
     env = "cp-dev"
+    "kubernetes.io/role/elb" = "1"
   }
 }
 
@@ -38,6 +39,7 @@ resource "aws_subnet" "ts-16300419-ESG-cp-dev-pubic-sub-2" {
   tags = {
     Name = "ts-16300419-ESG-cp-dev-pubic-sub-2"
     env = "cp-dev"
+    "kubernetes.io/role/elb" = "1"
   }
 }
 
@@ -125,6 +127,7 @@ resource "aws_subnet" "ts-16300419-ESG-cp-dev-private-sub-1" {
   tags = {
     Name = "ts-16300419-ESG-cp-dev-private-sub-1"
     env = "cp-dev"
+    "kubernetes.io/role/internal-elb" = "1"
   }
 }
 
@@ -138,6 +141,7 @@ resource "aws_subnet" "ts-16300419-ESG-cp-dev-private-sub-2" {
   tags = {
     Name = "ts-16300419-ESG-cp-dev-private-sub-2"
     env = "cp-dev"
+    "kubernetes.io/role/internal-elb" = "1"
   }
 }
 
