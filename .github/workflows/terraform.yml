@@ -28,9 +28,6 @@ jobs:
     - name: Run command
       run: sudo mv /tmp/eksctl /usr/local/bin
 
-    - name: Run command
-      run: eksctl version
-
     - name: Terraform Init
       run: terraform init -input=false
 
